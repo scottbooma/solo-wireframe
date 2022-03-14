@@ -12,7 +12,7 @@ nav {
 }
 
 .primary-navigation {
-    grid-row-start: 1 / span 1;
+    grid-row: 1 / span 1;
     display:flex;
     text-transform: uppercase;
     justify-content: space-between;
@@ -59,7 +59,7 @@ a + a {
 }
 
 .hero {
-    grid-row-start: 2 / span 1;
+    grid-row: 2 / span 1;
     position: relative;
 }
 
@@ -105,5 +105,74 @@ a + a {
     border-color: hsl(37deg 64% 28%);
     transition: 0.3s;
 }
+
+.main-content {
+    grid-row: 3 / span 1;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0deg 0% 17%);
+    color: hsl(0deg 0% 89%);
+    row-gap: 36px;
+}
+
+.feature-1 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    background-image: url("images/maldives-cabana.jpg");
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.feature-3 {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.feature-4 {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.feature {
+    padding: 12px 36px;
+    display: grid;
+    grid-template-rows: auto 72px auto;
+    row-gap: 24px;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    padding: 24px 36px 0 36px;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.feature h2 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feature a {
+    padding: 10px 30px;
+    border: 2px solid hsl(0deg 0% 89%);
+    width: 102px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feature a:hover {
+    background-color: hsl(37deg 64% 28%);
+    border-color: hsl(37deg 64% 28%);
+    transition: 0.3s;
+}
+
+
 
 
