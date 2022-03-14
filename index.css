@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.primary-navigation {
+    position: fixed;
+    display:flex;
+    text-transform: uppercase;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 24px 0px 24px;
+    background-color: hsl(0deg 0% 17%);
+    color: hsl(0deg 0% 89%);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0deg 0% 89%);
+}
+
+
+.navigation-links {
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 120px;
+}
+
+.nav-logo img:hover {
+    color: hsl(0deg 0% 67%);
+    transition: 0.3s;
+}
+
+li {
+    margin-left: 24px;
+}
+
+header a:hover {
+    color: hsl(0deg 0% 67%);
+    transition: 0.3s;
+}
+
+a + a {
+    margin-left: 16px;
+}
+
+.hero {
+    background-image: "images/guitar-hotel.jpg";
+}
