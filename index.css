@@ -17,7 +17,7 @@ nav {
     text-transform: uppercase;
     justify-content: space-between;
     align-items: center;
-    padding: 6px 24px 0px 24px;
+    padding: 6px 5% 0px 5%;
     background-color: hsl(0deg 0% 17%);
     color: hsl(0deg 0% 89%);
     width: 100%;
@@ -41,7 +41,7 @@ a {
 }
 
 .nav-logo img:hover {
-    color: hsl(0deg 0% 67%);
+    opacity: 0.6;
     transition: 0.3s;
 }
 
@@ -54,8 +54,14 @@ header a:hover {
     transition: 0.4s;
 }
 
+
 a + a {
-    margin-left: 16px;
+    margin-left: 8px;
+}
+
+a + a::before {
+    content: "|";
+    margin-right: 8px;
 }
 
 .hero {
@@ -73,7 +79,7 @@ a + a {
     bottom: 0;
     left: 0;
     right: 0;
-    top: 50%;
+    top: 20%;
     background: linear-gradient(to top, hsla(0, 0%, 10%, 1), hsla(0, 0%, 40%, 0));
     z-index: 10;
 }
@@ -89,8 +95,8 @@ a + a {
 }
 
 .call-to-action p {
-    font-size: 36px;
-    margin-bottom: 24px;
+    font-size: 48px;
+    margin-bottom: 48px;
     font-weight: 700;
 }
 
@@ -106,43 +112,66 @@ a + a {
     transition: 0.3s;
 }
 
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .main-content {
     grid-row: 3 / span 1;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    background-color: hsl(0deg 0% 17%);
     color: hsl(0deg 0% 89%);
-    row-gap: 36px;
+    grid-gap: 36px;
+    width: 1000px;
+    margin-bottom: 64px;
 }
 
 .feature-1 {
     grid-row: 2 / span 1;
     grid-column: 1 / span 1;
-    background-image: url("images/maldives-cabana.jpg");
+    background-image: url("images/rockon.jpg");
     background-size: cover;
 }
 
 .feature-2 {
     grid-row: 2 / span 1;
     grid-column: 2 / span 1;
+    background-image: url("images/guitar.jpg");
+    background-size: cover;
+
 }
 
 .feature-3 {
     grid-row: 3 / span 1;
     grid-column: 1 / span 1;
+    background-image: url("images/tribe.jpg");
+    background-size: cover;
 }
 
 .feature-4 {
     grid-row: 3 / span 1;
     grid-column: 2 / span 1;
+    background-image: url("images/oldschool.jpg");
+    background-size: cover;
+
 }
 
-.feature {
-    padding: 12px 36px;
+
+
+.fade-feature {
+    padding: 24px 36px;
     display: grid;
     grid-template-rows: auto 72px auto;
     row-gap: 24px;
+    background-color: hsla(0, 0%, 10%, 0.7);
+    opacity: 0;
+}
+
+.fade-feature:hover {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .main-content h1 {
@@ -151,6 +180,7 @@ a + a {
     display: flex;
     align-items: flex-end;
     text-transform: uppercase;
+    color: hsl(0deg 0% 17%);
 }
 
 .feature h2 {
@@ -165,6 +195,7 @@ a + a {
     width: 102px;
     text-align: center;
     text-transform: uppercase;
+
 }
 
 .feature a:hover {
@@ -173,6 +204,46 @@ a + a {
     transition: 0.3s;
 }
 
+@media (max-width: 1200px) {
+    .main-content {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 
+    .call-to-action p {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-content {
+        display: grid;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 36px;
+        margin-bottom: 64px;
+    }
+
+    .feature-1 {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    .feature-2 {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;    
+    }
+    
+    .feature-3 {
+        grid-row: 4 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    .feature-4 {
+        grid-row: 5 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+}
 
 
