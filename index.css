@@ -55,19 +55,44 @@ header a:hover {
     transition: 0.4s;
 }
 
+.account-actions {
+    display: inline-flex;
+    flex-flow: row nowrap;
+}
 
-a + a {
+.account-actions li + li::before {
+    content: "|";
+    margin-right: 12px;
+}
+
+li + li {
     margin-left: 12px;
 }
 
-a + a::before {
-    content: "|";
-    margin-right: 12px;
+@media (max-width: 800px) {
+    .primary-navigation {
+        display: flex;
+        flex-flow: column nowrap;
+        padding-bottom: 12px;
+    }
+}
+
+@media(max-width: 600px) {
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    
+    .navigation-links li {
+        margin: 6px;
+    }
 }
 
 .hero {
     grid-row: 2 / span 1;
     position: relative;
+    background-color: black;
 }
 
 .hero > img {
@@ -115,7 +140,8 @@ a + a::before {
 
 .content-wrapper {
     display: flex;
-    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .main-content {
@@ -128,6 +154,7 @@ a + a::before {
     width: 1000px;
     margin-bottom: 64px;
 }
+
 
 .feature-1 {
     grid-row: 2 / span 1;
@@ -206,9 +233,14 @@ a + a::before {
 }
 
 @media (max-width: 1200px) {
+    .content-wrapper {
+        padding: 24px;
+    }
+    
     .main-content {
         margin-left: 10%;
         margin-right: 10%;
+        width: 100%;
     }
 
     .call-to-action p {
@@ -226,7 +258,7 @@ a + a::before {
         grid-template-rows: auto 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
         grid-gap: 36px;
-        margin-bottom: 64px;
+        margin-bottom: 24px;
     }
 
     .main-content h1 {
