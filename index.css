@@ -65,7 +65,7 @@ header a:hover {
     margin-right: 12px;
 }
 
-li + li {
+.account-actions li + li {
     margin-left: 12px;
 }
 
